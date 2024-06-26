@@ -35,14 +35,14 @@ createApp({
         nextImage() {
             this.activeImage++;
             if (this.activeImage > this.slides.length - 1) {
-                this.activeImage === 0;
+                this.activeImage = 0;
             }
         },
         // click per far andare indietro di 1 l'immaggine
         prevImage() {
             this.activeImage--;
             if (this.activeImage < 0) {
-                this.activeImage === this.slides.length - 1;
+                this.activeImage = this.slides.length - 1;
             }
         }
     }
