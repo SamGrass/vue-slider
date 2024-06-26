@@ -30,7 +30,22 @@ createApp({
                 
             ],
         }     
-    }, 
+    }, methods: {
+        // click per far andare avanti di 1 l'immaggine
+        nextImage() {
+            this.activeImage++;
+            if (this.activeImage > this.slides.image.length - 1) {
+                this.activeImage === 0;
+            }
+        },
+        // click per far andare indietro di 1 l'immaggine
+        prevImage() {
+            this.activeImage--;
+            if (this.activeImage < 0) {
+                this.activeImage === this.slides.image.length - 1;
+            }
+        }
+    }
 }).mount('#app')
 // utilizzare vue per rendere dinamico il carosello
 // al click delle frecce cambiare immaggine
